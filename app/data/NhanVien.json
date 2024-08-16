@@ -1,0 +1,29 @@
+[
+  {
+    "HoNV": "Lê",
+    "TenNV": "Chí Thiện",
+    "Phone": "0942117827",
+    "NgaySinh": "2003/11/26",
+    "GioiTinh": "Nam",
+    "NgayVaoLam": "2022/01/01",
+    "ChucVu": 1
+  },
+  {
+    "HoNV": "Lê",
+    "TenNV": "Đình Chiến",
+    "Phone": "096409816",
+    "NgaySinh": "2003/12/5",
+    "GioiTinh": "Nam",
+    "NgayVaoLam": "2022/01/01",
+    "ChucVu": 1
+  },
+  {
+    "HoNV": "Nguyễn",
+    "TenNV": "Đặng Huy Phú",
+    "Phone": "0337104967",
+    "NgaySinh": "2003/5/28",
+    "GioiTinh": "Nam",
+    "NgayVaoLam": "2022/01/01",
+    "ChucVu": 1
+  }
+]

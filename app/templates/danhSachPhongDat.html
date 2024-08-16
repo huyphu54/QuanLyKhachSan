@@ -1,0 +1,32 @@
+{% extends 'layout/base.html' %}
+
+{% block title %} Danh sách phòng đặt {% endblock %}
+
+{% block content %}
+<h1>Danh sách phòng đặt</h1>
+{% if 'danhSachPhongDat' in session %}
+<table class="table">
+    <tr>
+        <th>Số phòng</th>
+        <th>Tên phòng</th>
+        <th>Đơn giá</th>
+        <th>Ngày nhận phòng</th>
+        <th>Ngày trả phòng</th>
+        <th>Ngày đặt phòng</th>
+        <th></th>
+    </tr>
+    {% for c in session['danhSachPhongDat'].values() %}
+    <tr id="Phong{{c.MaPhong}}">
+        <td>{{ c.TenPhong }}</td>
+        <td>{{ c.TenLoaiPhong }}</td>
+        <td>{{ c.DonGia }} VNĐ</td>
+        <td>{{ c.NgayNhanPhong }}</td>
+        <td>{{ c.NgayTraPhong }}</td>
+        <td>{{ c.NgayDatPhong }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<div class="alert alert-warning">Bạn chưa đặt phòng nào!</div>
+{% endif %}
+{% endblock %}

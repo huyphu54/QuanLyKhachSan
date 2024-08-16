@@ -1,0 +1,26 @@
+[
+  {
+    "TenPhong": "001",
+    "SoKhachToiDa": 3,
+    "MoTa": "abc",
+    "MaLoaiPhong": 1
+  },
+  {
+    "TenPhong": "002",
+    "SoKhachToiDa": 3,
+    "MoTa": "abc",
+    "MaLoaiPhong": 2
+  },
+  {
+    "TenPhong": "003",
+    "SoKhachToiDa": 3,
+    "MoTa": "abc",
+    "MaLoaiPhong": 3
+  },
+  {
+    "TenPhong": "004",
+    "SoKhachToiDa": 3,
+    "MoTa": "abc",
+    "MaLoaiPhong": 4
+  }
+]

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt phòng</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/booking.css') }}">
+
+</head>
+<body>
+<h1>Form đặt phòng</h1>
+<form method="POST" action="{{ url_for('booking') }}">
+    <label for="ma_phong">Chọn phòng:</label>
+    <select name="ma_phong" id="ma_phong">
+        {% for phong in danh_sach_phong %}
+        <option value="{{ phong.MaPhong }}">{{ phong.TenPhong }}</option>
+        {% endfor %}
+    </select>
+    <br>
+    <label for="ho_kh">Họ khách hàng:</label>
+    <input type="text" name="ho_kh" id="ho_kh" required>
+
+    <label for="ten_kh">Tên khách hàng:</label>
+    <input type="text" name="ten_kh" id="ten_kh" required>
+
+    <label for="phone">Số điện thoại:</label>
+    <input type="text" name="phone" id="phone" required>
+
+    <label for="cmnd">CMND:</label>
+    <input type="text" name="cmnd" id="cmnd" required>
+
+    <label for="dia_chi">Địa chỉ:</label>
+    <input type="text" name="dia_chi" id="dia_chi">
+
+    <label for="quoc_tich">Quốc tịch:</label>
+    <input type="text" name="quoc_tich" id="quoc_tich" required>
+    <label for="ma_loai_khach_hang">Chọn loại khách hàng:</label>
+    <select name="ma_loai_khach_hang" id="ma_loai_khach_hang">
+        {% for loai_khach_hang in danh_sach_loai_khach_hang %}
+        <option value="{{ loai_khach_hang.MaLoaiKH }}">{{ loai_khach_hang.TenLoaiKH }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Đặt phòng">
+</form>
+</body>
+</html>

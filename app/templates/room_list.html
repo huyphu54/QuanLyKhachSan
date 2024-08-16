@@ -1,0 +1,42 @@
+{% extends 'layout/base.html' %}
+{% block title %} Đặt phòng {% endblock %}
+{% block content %}
+<h1 class="text-center mt-2 ">Đặt phòng</h1>
+<div class="container mt-5">
+  <h2>Lọc Phòng</h2>
+  <form>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <label for="from_price" class="form-label">Giá từ</label>
+        <input type="number" class="form-control" id="from_price" name="from_price" placeholder="Nhập giá tối thiểu">
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="to_price" class="form-label">Đến</label>
+        <input type="number" class="form-control" id="to_price" name="to_price" placeholder="Nhập giá tối đa">
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="keyword" class="form-label">Tim Theo tên</label>
+        <input type="text" class="form-control" id="keyword" name="keyword" placeholder="Nhập tên cần tìm">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Lọc</button>
+  </form>
+</div>
+<section class="container">
+    <div class="row">
+        {% for room in room_list %}
+        <div class="col-xs-12 col-md-3" style="padding: 5px;">
+            <div class="card">
+                <img class="card-img-top" src="{{ room  .Image }}" alt="Card image">
+                  <div class="card-body">
+                    <h4 class="card-title">{{ room.TenLoaiPhong }}</h4>
+                    <p class="card-text">{{ '{:,.0f} VNĐ/Đêm'.format(room.DonGia) }}</p>
+                    <a href="#" class="btn btn-primary" style="width:55%">Xem chi tiết</a>
+                    <a href="{{ url_for('booking') }}" class="btn btn-danger" >Đặt phòng</a>
+                  </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,35 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #FAEBD7;
+        }
+        h1 {
+            text-align: center;
+            color: #FF7F50;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            background: #F0FFFF;
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
